@@ -18,12 +18,13 @@
  * limitations under the License.
  */
 
-#ifndef _FASTDDS_STATUSMASK_HPP_
-#define _FASTDDS_STATUSMASK_HPP_
+#ifndef FASTDDS_DDS_CORE_STATUS__STATUSMASK_HPP
+#define FASTDDS_DDS_CORE_STATUS__STATUSMASK_HPP
 
-#include <fastrtps/fastrtps_dll.h>
+#include <fastdds/fastdds_dll.hpp>
 
 #include <bitset>
+#include <cstdint>
 #include <sstream>
 
 //!Alias of size_t(16)
@@ -43,7 +44,7 @@ namespace dds {
  * - indicate status changes when calling dds::core::Entity::status_changes
  */
 
-class RTPS_DllAPI StatusMask : public std::bitset<FASTDDS_STATUS_COUNT>
+class FASTDDS_EXPORTED_API StatusMask : public std::bitset<FASTDDS_STATUS_COUNT>
 {
 public:
 
@@ -266,4 +267,4 @@ public:
 } //namespace eprosima
 
 
-#endif //_FASTDDS_STATUSMASK_HPP_
+#endif //FASTDDS_DDS_CORE_STATUS__STATUSMASK_HPP
